@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MASH</title>
+  </head>
+
+  <body>
+    <h1>M.A.S.H</h1>
+    <p>Fill out the form to play MASH!</p>
+    <p>
+      Enter at least 4 categories (e.g., job, partner, number of kids, pets,
+      etc) and 4 options for each category.
+    </p>
+
+    <form id="userForm">
+      <label for="category1">Category 1:</label><br />
+      <input
+        type="text"
+        id="category1"
+        name="category1"
+        placeholder="category"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option1a"
+        name="option1a"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option1b"
+        name="option1b"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option1c"
+        name="option1c"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option1d"
+        name="option1d"
+        placeholder="option"
+        required
+      /><br />
+      <br />
+
+      <label for="category2">Category 2:</label><br />
+      <input
+        type="text"
+        id="category2"
+        name="category2"
+        placeholder="category"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option2a"
+        name="option2a"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option2b"
+        name="option2b"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option2c"
+        name="option2c"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option2d"
+        name="option2d"
+        placeholder="option"
+        required
+      /><br />
+      <br />
+
+      <label for="category3">Category 3:</label><br />
+      <input
+        type="text"
+        id="category3"
+        name="category3"
+        placeholder="category"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option3a"
+        name="option3a"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option3b"
+        name="option3b"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option3c"
+        name="option3c"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option3d"
+        name="option3d"
+        placeholder="option"
+        required
+      /><br />
+
+      <br />
+      <label for="category4">Category 4:</label><br />
+      <input
+        type="text"
+        id="category4"
+        name="category4"
+        placeholder="category"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option4a"
+        name="option4a"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option4b"
+        name="option4b"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option4c"
+        name="option4c"
+        placeholder="option"
+        required
+      /><br />
+      <input
+        type="text"
+        id="option4d"
+        name="option4d"
+        placeholder="option"
+        required
+      /><br />
+
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <br />
+
+    <h1>Random Number Display</h1>
+    <div id="display">Press "Start" to begin</div>
+    <button id="startButton">Start</button>
+    <button id="stopButton" disabled>Stop</button>
+    <p id="lastNumber"></p>
+
+    <br /><br />
+    <h1>User Output Example</h1>
+    <br />
+    <div id="output"></div>
+
+    <script src="prompts.js"></script>
+  </body>
+</html>
