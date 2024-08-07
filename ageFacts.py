@@ -20,7 +20,10 @@ from dateutil import parser
 import random
 import requests
 
-# define messages in English and French
+
+#########################################
+# Define messages in English and French
+#########################################
 
 AGEFACTS_MESSAGES_EN= {
     "language" : "EN",
