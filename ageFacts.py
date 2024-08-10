@@ -70,10 +70,13 @@ AGEFACTS_MESSAGES_FR = {
     "SALUTATION": "\nÀ la prochaine fois !\n"
 }
 
+#########################################
+# Define functions
+#########################################
 
-# define functions
 
-def get_messages_agefacts():
+# gets messages in English or French
+def get_language():
     while True:
         language = input("Language (FR / EN) : ").upper()
         if language == "EN":
@@ -85,9 +88,10 @@ def get_messages_agefacts():
         else:
             pass
 
+
+# Calculate age using relativedelta
 def get_time_since_birthday(today, birthdate):
 
-    # Calculates age using relativedelta
         # Example: 
         #    today: 2024-06-17
         #    birthdate: 1984-12-02
@@ -113,9 +117,9 @@ def get_time_since_birthday(today, birthdate):
         "age_in_months" : age_in_months}
 
 
-
+# determines when you will turn / did turn 10,000 days old
 def get_days_till_10000(age_in_days, msgs):
-    # determines when you will turn / did turn 10,000 days old
+
     days_till_10000 = 10000 - age_in_days
     if days_till_10000 > 0:
         msg_10000 = msgs["msg_10000_future"].format(days_till_10000=f"{days_till_10000}")
@@ -126,8 +130,8 @@ def get_days_till_10000(age_in_days, msgs):
     return msg_10000
 
 
+# get amount of skeleton that has regenerated based on your age
 def get_regen_amt(years, days, msgs):
-    # get amount of skeleton that has regenerated based on your age
     # source: https://book.bionumbers.org/how-quickly-do-different-cells-in-the-body-replace-themselves/ 
     REGEN_RATE = .10 #per year
     regen_amt = (years * REGEN_RATE) + (days / 365 *REGEN_RATE)  
@@ -138,16 +142,16 @@ def get_regen_amt(years, days, msgs):
     return msg_skeleton
 
 
+# determines how many insects you probably ate based on your age
 def get_insect_amt(years, days, msgs):
-    # determines how many insects you probably ate based on your age
     INSECT_RATE = 450 #grams per year
     insect_amt =  int((years * INSECT_RATE) + (days/365 *INSECT_RATE))
     msg_insect = msgs["msg_insect"].format(insect_amt=insect_amt)
     return msg_insect
 
 
+# randomly selects a message to display
 def print_random_stat(years, days, age_in_days, msgs):
-    # randomly selects a message to display
     msg_10000 = get_days_till_10000(age_in_days, msgs)
     msg_regen = get_regen_amt(years, days, msgs)
     msg_insect = get_insect_amt(years, days, msgs)
@@ -158,9 +162,9 @@ def print_random_stat(years, days, age_in_days, msgs):
     print(random_stat_msg)
 
 
+# gets historical information about your birthdate from English or French Wikipedia
 
 def get_historical_events(birthdate, language, msgs):
-    # gets historical information about your birthdate from English or French Wikipedia
 
     date = birthdate.strftime('%m/%d')
 
@@ -182,11 +186,12 @@ def get_historical_events(birthdate, language, msgs):
         return status_error_msg
 
 
+
 # Main program starts here
 
 def main():
     print()
-    agefacts_messages = get_messages_agefacts()
+    agefacts_messages = get_language()
     language = agefacts_messages["language"]
     today = datetime.now()
 
