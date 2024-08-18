@@ -1,6 +1,7 @@
 # Name Game: This program asks the user for their name and then prints out a name poem
 # based on the user's name.
 # Author: Sarah Perry
+# Date: 2024-08-18
 
 
 def main():
