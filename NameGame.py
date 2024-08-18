@@ -1,7 +1,7 @@
-# Name Game: This program asks the user for their name and then prints out a name poem
-# based on the user's name.
+# Description: Name Game; This program prints out a name poem based on the user's name.
 # Author: Sarah Perry
 # Date: 2024-08-18
+
 
 
 def main():
@@ -41,7 +41,8 @@ def main():
 
     # print goodbye message
     print("\nThanks for playing the Name Game!\n")
-    print("The Name Game is a song co-written and performed by Shirley Ellis & Lincoln Chase in 1964.")
+    print("""The Name Game is a song co-written and performed by Shirley Ellis
+          & Lincoln Chase in 1964.""")
 
 if __name__ == "__main__":
     main()
